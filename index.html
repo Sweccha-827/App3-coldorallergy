@@ -52,9 +52,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var resultText = document.getElementById("results");
 		var coldresults = cold_count/4 * 100
 		var allergyresults = allergy_count/4 * 100
-		"Probability it is allergies = " + allergyPercent + "%" + "<br> Probaility it is a cold = "+coldPercent + "%" + "<br>" + "<br> your test is finished!"; 
-		
-	};
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	}
 
   </script>
 
@@ -118,8 +117,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div id="content" class="w3-container">
 	<p>Do you have a fever?</p>    <!--Inserted content for question 3-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "no" button-->
 	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--Inserted "yes" button-->
-        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "no" button-->
 </div><!-- /content -->
 
 	
@@ -130,8 +129,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>    <!--Inserted content for question-->
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "no" button-->
 	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--Inserted "yes" button-->
-         <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "no" button-->
 </div><!-- /content -->
 	
 <div class="page" id="four"> <!--Inserted page 4-->
