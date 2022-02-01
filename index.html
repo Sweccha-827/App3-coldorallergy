@@ -37,24 +37,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+	<!--Inserted variables of allergy count and cold count-->
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
+	<!--Inserted allergyAdd function to add to probability of having allergies-->
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	<!--Inserted coldAdd function to add to probability of having a cold-->
 	
 	function resultsoutput(){
 		var resultText = document.getElementById("results");
 		var coldPercent = (cold_count/4) * 100
+		<!--Inserted new variable of coldPercent to calculate the probability of the symptoms being caused by a cold-->
 		var allergyPercent = (allergy_count/4) * 100
+		<!--Inserted new variable of allergyPercent to calculate the probability of the symptoms being caused by allergies-->
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+		<!--Added results string to display the cold and allergy probabilities on the results page-->
 	}
-
+	
   </script>
 
 
@@ -96,24 +101,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	
+ </div><!-- /content -->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 	</div>
 
-<div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+<div class="page" id="one">	<!--This is page one.-->
+	<div id="header" class="w3-container w3-flat-carrot">	<!--This is the orange header-->
+		<h1>Question 1</h1>	<!-- Text for header on page one-->
 	</div>
 	
-<div id="content" class="w3-container">
-	<p>Are your eyes watery or itchy?</p>    <!--Inserted content for question 1-->
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "yes" button-->
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--Inserted "no" button-->
+<div id="content" class="w3-container"> 	
+	<p>Are your eyes watery or itchy?</p>	<!--Inserted content for question 1-->
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>	<!--Inserted "yes" button to add to percentage for allergy count-->
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	<!--Inserted "no" button to add to percentage for cold count-->
  </div><!-- /content -->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--This is the orange header-->
+	<p>DIY!</p>	<!--Text for header-->
 </footer>
 	</div>
 		
@@ -121,65 +126,65 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	
     
-<div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+<div class="page" id="two">	<!--This is page two.-->
+	<div class="w3-container w3-flat-carrot">	<!--Inserted orange header-->
+		<h1>Question 2</h1>	<!--Inserted title for Question 2 in header-->
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have a fever?</p>    <!--Inserted content for question 2-->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "yes" button-->
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--Inserted "no" button-->
+	<p>Do you have a fever?</p>	<!--Inserted content for question 2-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>	<!--Inserted "yes" button to add to percentage for cold count-->
+	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>	<!--Inserted "no" button to add to percentage for allergy count-->
 </div><!-- /content -->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--Inserted footer on page two-->
+	<p>DIY!</p>	<!--Inserted text for footer-->
 </footer>
 	</div>
 
 	
-<div class="page" id="three"> <!--Inserted page 3-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1> <!--Inserted question 3-->
+<div class="page" id="three">	<!--Inserted page 3-->
+	<div class="w3-container w3-flat-carrot">	<!--Inserted orange header-->
+		<h1>Question 3</h1>	<!--Inserted question 3 title in header-->
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>    <!--Inserted content for question-->
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "yes" button-->
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--Inserted "no" button-->
+	<p>Do you have a sore throat?</p>	<!--Inserted content for question 3-->
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>	<!--Inserted "yes" button to add to percentage for cold count-->
+	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>	<!--Inserted "no" button to add to percentage for allergy count-->
 </div><!-- /content -->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--Inserted orange footer on page three.-->
+	<p>DIY!</p>	<!--Inserted text for footer on page three.-->
 </footer>
 	</div>
 	
-<div class="page" id="four"> <!--Inserted page 4-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1> <!--Inserted Question 4-->
+<div class="page" id="four">	<!--Inserted page 4-->
+	<div class="w3-container w3-flat-carrot">	<!--Inserted orange footer for page four-->
+		<h1>Question 4</h1>	<!--Inserted Question 4 text in header-->
 	</div>
 	
 <div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>    <!--Inserted content for question 4-->
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Inserted "yes" button-->
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--Inserted "no" button-->
+	<p>Are your symptoms seasonal or chronic?</p>	<!--Inserted content for question 4-->
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>	<!--Inserted "yes" button to add to percentage for allergy count-->
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	<!--Inserted "no" button to add to percentage for cold count-->
 </div><!-- /content -->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--Inserted footer for page four->
+	<p>DIY!</p>	<!--Inserted text for page four-->
 </footer>
 	</div>
 	
 	
-<div class="page" id="five"> <!--Inserted page 5-->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1> <!--Inserted "Results" page-->
+<div class="page" id="five">	<!--Inserted page 5-->
+	<div class="w3-container w3-flat-carrot">	<!--Inserted orange header for page five-->
+		<h1>Results</h1>	<!--Inserted "Results" text in header-->
 	</div>
 	
-    	<div id="content" class="w3-container">
-		<p id="results"></p>
-		<a onclick="resultsoutput();" class="w3-btn w3-black"> Results</a> <!--Inserted "yes" button-->
+    	<div id="content" class="w3-container">	<!--Inserted button for results on page five-->
+		<p id="results"></p>	<!--Named the button "results"-->
+		<a onclick="resultsoutput();" class="w3-btn w3-black"> Results</a> <!--Inserted output function for results-->
        		
     </div>
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<footer class="w3-bottom w3-container w3-flat-carrot">	<!--Inserted orange footer on page five-->
+	<p>DIY!</p> <!--Inserted text for footer on page five-->
 </footer>
 	</div>
 
